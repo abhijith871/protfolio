@@ -1,31 +1,144 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Portfolio - Home</title>
+  <title>Abhijith C Santhosh | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="signup.html">Signup</a>
-    <a href="about.html">About Me</a>
-    <a href="gallery.html">My Gallery</a>
-    <a href="contact.html">Contact Me</a>
-  </nav>
 
+  <!-- Header -->
   <header>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hi, I’m Abhijith — a Computer Science student passionate about coding & technology 🚀</p>
+    <h1>Abhijith C Santhosh</h1>
+    <p>B.Tech CSE Student | Web Developer | Blockchain Enthusiast</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="darkToggle">🌙 Dark Mode</button>
   </header>
 
-  <section style="padding:40px; text-align:center;">
-    <h2>Explore My Work</h2>
-    <p>Use the navigation bar above to know more about me, my skills, and my projects.</p>
+  <!-- Home Section -->
+  <section id="home" class="card center">
+    <h2>Welcome 👋</h2>
+    <p>I’m <b>Abhijith</b>. This is my personal portfolio where I showcase my journey, skills, and projects 🚀</p>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Abhijith C Santhosh | My Portfolio</p>
-  </footer>
+  <!-- About Section -->
+  <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>
+      I am <b>Abhijith C Santhosh</b>, a B.Tech Computer Science student at 
+      <b>St. Joseph’s College of Engineering and Technology, Palai (2022–2026)</b>.  
+      With certifications from <b>Infosys Springboard</b> and <b>SMEC Automation</b>, 
+      I’ve gained strong foundations in modern technologies.  
+
+      My interests include <b>web development</b>, <b>IoT applications</b>, and 
+      <b>blockchain solutions</b>. I love building projects that make life smarter, 
+      easier, and more secure.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="card">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span class="skill html">HTML</span>
+      <span class="skill css">CSS</span>
+      <span class="skill js">JavaScript</span>
+      <span class="skill python">Python</span>
+      <span class="skill java">Java</span>
+      <span class="skill iot">IoT</span>
+      <span class="skill blockchain">Blockchain</span>
+      <span class="skill github">GitHub</span>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="card">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>CollegeGO</h3>
+        <p>
+          A completed project: <b>CollegeGO</b> is a smart college companion system 
+          that integrates notices, events, and academic resources into one 
+          digital platform for students.
+        </p>
+        <div class="buttons">
+          <a href="#" class="btn">View Details</a>
+          <a href="https://github.com/abhijith871" target="_blank" class="btn secondary">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Blockchain E-Voting</h3>
+        <p>
+          A research project on <b>blockchain-enabled electronic voting</b> 
+          for smart cities. It ensures secure, transparent, and tamper-proof elections 
+          with IoT integration.
+        </p>
+        <div class="buttons">
+          <a href="#" class="btn">View Details</a>
+          <a href="https://github.com/abhijith871" target="_blank" class="btn secondary">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="card">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="images/photo1.jpg" alt="Certificate 1">
+      <img src="images/photo2.jpg" alt="Certificate 2">
+      <img src="images/photo3.jpg" alt="Certificate 3">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="card">
+    <h2>Contact Me</h2>
+    <p>📧 <b>Email:</b> <a href="mailto:abhijithcsanthosh2026@cs.sjcetpalai.ac.in">abhijithcsanthosh2026@cs.sjcetpalai.ac.in</a></p>
+    <p>📞 <b>Phone:</b> +91 9605973903</p>
+    <p>💻 <b>GitHub:</b> <a href="https://github.com/abhijith871" target="_blank">github.com/abhijith871</a></p>
+    <p>🔗 <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/abhijith-c-santhosh-874485327" target="_blank">linkedin.com/in/abhijith-c-santhosh-874485327</a></p>
+
+    <h3>Find Me Here</h3>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62886.80639404005!2d76.67959090573106!3d9.898482841513864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07c40a315b6705%3A0x4a8f3d2b78b03d27!2sThodupuzha%2C%20Kerala!5e0!3m2!1sen!2sin!4v1757272234942!5m2!1sen!2sin" 
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- Dark Mode Script -->
+  <script>
+    const toggle = document.getElementById("darkToggle");
+
+    // Load saved mode from localStorage
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+      toggle.textContent = "☀️ Light Mode";
+    }
+
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      if (document.body.classList.contains("dark-mode")) {
+        toggle.textContent = "☀️ Light Mode";
+        localStorage.setItem("theme", "dark");
+      } else {
+        toggle.textContent = "🌙 Dark Mode";
+        localStorage.setItem("theme", "light");
+      }
+    });
+  </script>
+
 </body>
 </html>
